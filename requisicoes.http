@@ -1,0 +1,31 @@
+### Listar
+GET http://localhost:8080/filmes
+Accept: application/json
+
+### Cadastrar
+POST http://localhost:8080/filmes
+Content-Type: application/json
+Accept: application/json
+
+{"titulo": "Interestelar", "genero": "Ficcao cientifica", "ano": 2014}
+
+### Buscar por ID
+GET http://localhost:8080/filmes/1
+
+### Filtrar
+GET http://localhost:8080/filmes?genero=FICCAO CIENTIFICA
+
+### Atualizar (todos os campos)
+PUT http://localhost:8080/filmes/1
+Content-Type: application/json
+
+{"titulo": "Interestelar Atualizado", "genero": "Ficcao cientifica", "ano": 2014}
+
+### Excluir
+DELETE http://localhost:8080/filmes/1
+
+### Inválido: 400
+POST http://localhost:8080/filmes
+Content-Type: application/json
+
+{}
